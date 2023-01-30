@@ -68,7 +68,7 @@ bool getPtsGoodOrBad() {
     string ptsGoodOrBad;
     cout << "Is it good or bad to have the most points? [good / bad] ";
     cin >> ptsGoodOrBad;
-    return ptsGoodOrBad == "good";
+    return ptsGoodOrBad == "good" || ptsGoodOrBad == "g";
 }
 
 int getNumTeams(const bool wantsTeams) {

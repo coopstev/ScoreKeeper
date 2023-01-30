@@ -2,3 +2,6 @@
 Debug/
 Release/
 *.csv
+*.vcxproj*
+*.sln
+*.exe
