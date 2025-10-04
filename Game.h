@@ -40,7 +40,7 @@ public:
         if (areTeams) { // There are teams
             int index = 0;
             for (int i = 0; i < numTeams; ++i) {
-                int numPlayersOnTeam = numPlayersOnEachTeam[i];
+                int numPlayersOnTeam = numPlayersOnEachTeam[i + 1];
                 string teamName = teamNames_in[i];
                 teams.push_back(new Team(teamName, numPlayersOnTeam));
                 for (int j = 0; j < numPlayersOnTeam; ++j) {

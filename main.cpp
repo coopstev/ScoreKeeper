@@ -182,14 +182,14 @@ string* getPlayerNames(const int& numPlayers, const int* numPlayersOnEachTeam, c
 string* getTeamNames(const string* namesArr, const int& numTeams, const int* numPlayersOnEachTeam, const bool areTeams) {
     if (areTeams) {
         string* teamNames = new string[numTeams];
-        int index = 0;
+        int playerIndex = 0;
         cout << endl;
         for (int i = 0; i < numTeams; ++i) {
-            cout << "Do you want " << namesArr[index] << "'s team to have a name? [yes / no] ";
+            cout << "Do you want " << namesArr[playerIndex] << "'s team to have a name? [yes / no] ";
             string wantsName;
             cin >> wantsName;
             if (wantsName == "yes") {
-                cout << "What do you want " << namesArr[index] << "'s team's name to be? ";
+                cout << "What do you want " << namesArr[playerIndex] << "'s team's name to be? ";
                 // cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 // while ((getchar()) != '\n');
                 getline(cin, teamNames[i]);
@@ -200,7 +200,7 @@ string* getTeamNames(const string* namesArr, const int& numTeams, const int* num
                 while ((getchar()) != '\n'); // Clears the ENTER stuck in cin
                 teamNames[i] = "";
             }
-            index += numPlayersOnEachTeam[i + 1];
+            playerIndex += numPlayersOnEachTeam[i + 1];
         }
         cout << endl;
         return teamNames;
